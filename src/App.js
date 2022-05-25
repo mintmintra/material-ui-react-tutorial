@@ -7,6 +7,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import TextField from '@mui/material/TextField';
 
 function CheckboxExample() {
   const [checked, setChecked] = React.useState(true)
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <TextField id="standard-basic" variant="filled" color='error' type="email" label="Email" placeholder='test@gmail.com' />
         <CheckboxExample />
         <ButtonGroup variant="contained" color="primary">
           <Button
