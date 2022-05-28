@@ -14,6 +14,7 @@ const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     border: 0,
+    marginBottom: 15,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
@@ -22,9 +23,9 @@ const useStyles = makeStyles({
   },
 })
 
-function ButtonStyled() {
+  function Hook() {
   const classes = useStyles();
-  return <Button className={classes.root}>Test Styled Button</Button>
+  return <Button className={classes.root}>Test Styled button</Button>;
 }
 
 function CheckboxExample() {
@@ -49,7 +50,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ButtonStyled />
+        <Hook />
         <TextField id="standard-basic" variant="filled" color='error' type="email" label="Email" placeholder='test@gmail.com' />
         <CheckboxExample />
         <ButtonGroup variant="contained" color="primary">
