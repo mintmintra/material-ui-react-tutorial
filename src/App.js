@@ -8,7 +8,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import TextField from '@mui/material/TextField';
-import { makeStyles } from '@mui/styles';
+import { makeStyles, ThemeProvider} from '@mui/styles';
+import { createTheme } from '@mui/material/styles';
+import { orange } from '@mui/material/colors';
 
 const useStyles = makeStyles({
   root: {
@@ -21,6 +23,14 @@ const useStyles = makeStyles({
     height: 48,
     padding: '0 30px',
   },
+})
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: orange[500],
+    }
+  } 
 })
 
   function Hook() {
@@ -48,6 +58,7 @@ function CheckboxExample() {
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
       <header className="App-header">
         <Hook />
@@ -68,6 +79,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header> 
     </div>
+    </ThemeProvider>
   );
 }
 
